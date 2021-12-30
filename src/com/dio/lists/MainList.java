@@ -5,17 +5,18 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+
+import com.dio.lists.comparators.ComparatorCor;
+import com.dio.lists.comparators.ComparatorIdade;
+import com.dio.lists.comparators.ComparatorNomeCorIdade;
+import com.dio.lists.entities.Gato;
+
 /*
  * Autor: Franco Brasil
  * Bootcamp Cognizant Java Developer
  * Trabalhando com Collections Java
  * Interface List
  */
-
-import com.dio.lists.comparators.ComparatorCor;
-import com.dio.lists.comparators.ComparatorIdade;
-import com.dio.lists.comparators.ComparatorNomeCorIdade;
-import com.dio.lists.entities.Gato;
 
 public class MainList {
 	
