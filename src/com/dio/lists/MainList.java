@@ -1,5 +1,6 @@
 package com.dio.lists;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -8,6 +9,7 @@ import java.util.List;
 
 import com.dio.lists.comparators.ComparatorCor;
 import com.dio.lists.comparators.ComparatorIdade;
+import com.dio.lists.comparators.ComparatorNiver;
 import com.dio.lists.comparators.ComparatorNomeCorIdade;
 import com.dio.lists.entities.Gato;
 
@@ -23,7 +25,7 @@ public class MainList {
 	public static void main(String[] args) {
 		
 		/*
-		 * Testando os método da classe ArrayList
+		 * Testando os mï¿½todo da classe ArrayList
 		 * 
 		List<Double> notas = new ArrayList<>();
 		double soma = 0d;
@@ -40,22 +42,22 @@ public class MainList {
 		notas.add(6.5);
 		notas.add(7.0);
 		
-		// atualizando um elemento da lista pelo índice
+		// atualizando um elemento da lista pelo ï¿½ndice
 		notas.set(6, 1d);
 		
 		System.out.println("ARRAY 01");
 		System.out.println(notas);
 		System.out.println("***************************************************");
-		System.out.println("ARRAY 01 com Laço For Each");
+		System.out.println("ARRAY 01 com Laï¿½o For Each");
 		for (Double n : notas) {
 			System.out.print(n + " ");
 		}
 		System.out.println();
 		System.out.println("***************************************************");
-		System.out.println("******************EXERCÍCIOS***********************");
+		System.out.println("******************EXERCï¿½CIOS***********************");
 		System.out.println("***************************************************");
-		System.out.println("No Array 01 contém a nota 10? -> " + notas.contains(10.0));
-		System.out.println("No Array 01 exiba a 3º nota adicionada -> " + notas.get(2));
+		System.out.println("No Array 01 contï¿½m a nota 10? -> " + notas.contains(10.0));
+		System.out.println("No Array 01 exiba a 3ï¿½ nota adicionada -> " + notas.get(2));
 		System.out.println("No Array 01 exiba a MENOR nota -> " + Collections.min(notas));
 		System.out.println("No Array 01 exiba a MAIOR nota -> " + Collections.max(notas));
 		Iterator<Double> it = notas.iterator();
@@ -63,53 +65,53 @@ public class MainList {
 			soma += it.next();	
 		}
 		System.out.println("Soma dos elementos do Array 01 -> " + soma);
-		System.out.println("Média dos elementos do Array 01 -> " + (soma / notas.size()));
-		System.out.printf("Média dos elementos do Array 01 -> %.2f\n", (soma / notas.size()));
+		System.out.println("Mï¿½dia dos elementos do Array 01 -> " + (soma / notas.size()));
+		System.out.printf("Mï¿½dia dos elementos do Array 01 -> %.2f\n", (soma / notas.size()));
 		notas.remove(0);
 		notas.remove(6.5);
-		System.out.println("ARRAY 01 Após exclusão do primeiro elemento e do elemento 6.5");
+		System.out.println("ARRAY 01 Apï¿½s exclusï¿½o do primeiro elemento e do elemento 6.5");
 		System.out.println(notas);
 		
 		System.out.println("***************************************************");
 		*/
 		
-		Gato siames = new Gato("Sião", 9, "Prateado");
-		Gato persa = new Gato("Ciro II", 7, "Dourado");
-		Gato sphynx = new Gato("Carvalho", 5, "Rosa Pele");
-		Gato munchkin = new Gato("Malcom-X", 10, "Caramelo");
-		Gato siberiano = new Gato("Vasily", 3, "Cinza Malhado");
-		Gato sphynx2 = new Gato("Toronto", 3, "Branco");
-		Gato himalaio = new Gato("Aiatolá", 8, "Preto");
-		Gato azulRusso = new Gato("Lenin", 11, "Cinza");
-		Gato scottishFold = new Gato("Uísque", 12, "Tigrado");
+		Gato siames = new Gato(LocalDate.parse("2022-01-01"), "SiÃ£o", 9, "Prateado");
+		Gato persa = new Gato(LocalDate.parse("2021-10-10"),"Ciro II", 7, "Dourado");
+		Gato sphynx = new Gato(LocalDate.parse("2022-01-11"), "Carvalho", 5, "Rosa Pele");
+		Gato munchkin = new Gato(LocalDate.parse("2021-11-20"), "Malcom-X", 10, "Caramelo");
+		Gato siberiano = new Gato(LocalDate.parse("2020-09-01"),"Vasily", 3, "Cinza Malhado");
+		Gato sphynx2 = new Gato(LocalDate.parse("2019-10-01"),"Toronto", 3, "Branco");
+		Gato himalaio = new Gato(LocalDate.parse("2018-07-01"),"AiatolÃ¡", 8, "Preto");
+		Gato azulRusso = new Gato(LocalDate.parse("2018-07-03"),"Lenin", 11, "Cinza");
+		Gato scottishFold = new Gato(LocalDate.parse("2021-10-09"),"UÃ­sque", 12, "Tigrado");
 		
 		List<Gato> gatos = new ArrayList<>
 		(Arrays.asList(
 				siames, persa, sphynx, munchkin, siberiano, sphynx2, himalaio, azulRusso, scottishFold));
-		System.out.println("*********************************************************");
-		System.out.println("******************POR ORDEM DE INSERÇÃO******************");
-		System.out.println("*********************************************************");
-		imprimir(gatos);
-		System.out.println("*********************************************************");
-		System.out.println("****************ORDEM ALEATÓRIA - SHUFFLE****************");
-		System.out.println("*********************************************************");
-		imprimirOrdemAleatoria(gatos);
+//		System.out.println("*********************************************************");
+//		System.out.println("******************POR ORDEM DE INSERï¿½ï¿½O******************");
+//		System.out.println("*********************************************************");
+//		imprimir(gatos);
+//		System.out.println("*********************************************************");
+//		System.out.println("****************ORDEM ALEATï¿½RIA - SHUFFLE****************");
+//		System.out.println("*********************************************************");
+//		imprimirOrdemAleatoria(gatos);
 		System.out.println("*********************************************************");
 		System.out.println("********************ORDENADO POR NOME********************");
 		System.out.println("*********************************************************");
-		imprimirOrdeadoPorNome(gatos);
-		System.out.println("*********************************************************");
-		System.out.println("*******************ORDENADO POR IDADE********************");
-		System.out.println("*********************************************************");
-		imprimirOrdeadoPoridade(gatos, new ComparatorIdade());
-		System.out.println("*********************************************************");
-		System.out.println("*******************ORDENADO POR COR********************");
-		System.out.println("*********************************************************");
-		imprimirOrdeadoPorCor(gatos, new ComparatorCor());
-		System.out.println("*********************************************************");
-		System.out.println("**************ORDENADO POR NOME/COR/IDADE****************");
-		System.out.println("*********************************************************");
-		imprimirOrdeadoPorNomeCorIdade(gatos, new ComparatorNomeCorIdade());
+		imprimirOrdeadoPorNiver(gatos, new ComparatorNiver());
+//		System.out.println("*********************************************************");
+//		System.out.println("*******************ORDENADO POR IDADE********************");
+//		System.out.println("*********************************************************");
+//		imprimirOrdeadoPoridade(gatos, new ComparatorIdade());
+//		System.out.println("*********************************************************");
+//		System.out.println("*******************ORDENADO POR COR********************");
+//		System.out.println("*********************************************************");
+//		imprimirOrdeadoPorCor(gatos, new ComparatorCor());
+//		System.out.println("*********************************************************");
+//		System.out.println("**************ORDENADO POR NOME/COR/IDADE****************");
+//		System.out.println("*********************************************************");
+//		imprimirOrdeadoPorNomeCorIdade(gatos, new ComparatorNomeCorIdade());
 		
 	}
 	
@@ -125,6 +127,11 @@ public class MainList {
 	
 	private static void imprimirOrdeadoPorCor(List<Gato> gatos, ComparatorCor ccor) {
 		Collections.sort(gatos, ccor);
+		imprimir(gatos);
+	}
+
+	private static void imprimirOrdeadoPorNiver(List<Gato> gatos, ComparatorNiver cNiver) {
+		Collections.sort(gatos, cNiver);
 		imprimir(gatos);
 	}
 	
